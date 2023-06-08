@@ -1,0 +1,39 @@
+﻿@using Elmeya_Soft.Models;
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model Invoice
+<div class="text-center">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Client</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Date</th>
+                <th scope="col" colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>@Model.Client.Name</td>
+                    <td>@Model.TotalCost</td>
+                    <td>@Model.Date</td>
+                </tr>
+                
+                @foreach (var detail in @Model.invoiceDetails)
+                {
+                <tr>
+                    <td>@detail.Quantity</td>
+                    <td>@detail.Category.Name</td>
+                    <td>@detail.Quantity</td>
+                </tr>
+                }
+            
+                
+                
+        </tbody>
+    </table>
+
+
+</div>

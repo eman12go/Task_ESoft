@@ -1,0 +1,32 @@
+﻿@using Elmeya_Soft.Models;
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Invoice>
+<div class="text-center">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Client</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Date</th>
+                <th scope="col" colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var invoice in Model)
+            {
+                <tr>
+                    <td>@invoice.Client.Name</td>
+                    <td>@invoice.TotalCost</td>
+                    <td>@invoice.Date</td>
+                    <td><button class="btn btn-primary">Display</button></td>
+                    <td><a asp-action="AddInvoice" class="btn btn-primary">Add</a></td>
+                    <td><a asp-action="GetInvoiceById" asp-route-id="@invoice.Id" class="btn btn-success">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    
+</div>

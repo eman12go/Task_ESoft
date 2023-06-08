@@ -1,0 +1,23 @@
+-Task time: 2hr per 3 days => 6 hours
+
+- first I creat db for category, type of category , Client ,Invoice, invoce details
+with relationship using code first.
+
+-first day I create models and migration it in db
+
+-second&third day I create  controller,viewModel and views.
+
+-when I add invoice I add in two table and save changes.
+
+-sorry for this design :)
+but main function completed..
+like on change select in add option I bind this selected in another option. 
+
+
+notes:
+clients and category are static in database Idon`t do any controller for them 
+we can select from database any option when we do new invoice.
+so you can use bakup file :)
+
+thanks
+eman gomaa 
